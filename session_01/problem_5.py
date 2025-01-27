@@ -50,3 +50,15 @@ Example Scenarios:
     Input: 0
     Output: "x is zero"
 """
+# Take input from the user
+x = int(input("Enter a number: "))
+
+# Conditional checks with logical operators
+if x > 0 and x % 2 == 0:
+    print("x is a positive even number")
+elif x > 0 and x % 2 != 0:
+    print("x is a positive odd number")
+elif x < 0:
+    print("x is a negative number")
+else:
+    print("x is zero")
