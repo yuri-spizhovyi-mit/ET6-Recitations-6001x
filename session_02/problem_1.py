@@ -10,11 +10,11 @@ Indexing: Access a specific character using its position (e.g., s[0] gives the f
 Slicing: Extract a portion of the string using s[start:end], where start is inclusive and end is exclusive.
 Negative Indexing: Allows access from the end of the string (s[-1] is the last character).
 Instructions:
-Create a variable message with the value "Recitation Session".
-Print the first and last characters using indexing.
-Extract and print the substring "Recitation" using slicing.
-Extract and print the substring "Session" using slicing.
-Print the string in reverse order.
+1. Create a variable message with the value "Recitation Session".
+2. Print the first and last characters using indexing.
+3. Extract and print the substring "Recitation" using slicing.
+4. Extract and print the substring "Session" using slicing.
+5. Print the string in reverse order.
 """
 # Define a string variable
 
