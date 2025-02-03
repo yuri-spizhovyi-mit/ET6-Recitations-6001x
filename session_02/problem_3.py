@@ -13,9 +13,18 @@ Instructions:
 
 """
 # Define vowels
-
+vowels = {'a', 'e', 'i', 'o', 'u'}
+sentence = input("Enter a sentence: ")
+replaced_sentence = ''
 
 # Replace vowels with '*'
+for char in sentence: 
+  if char in vowels:
+    replaced_sentence += "*"
+  else:
+    replaced_sentence += char
+
 
 
 # Print the modified sentence
+print(replaced_sentence)
