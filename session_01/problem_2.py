@@ -21,3 +21,11 @@ monthly_savings = 10
 num_months = 4
 new_savings = monthly_savings * num_months
 print(new_savings)
+# Assign values to variables
+monthly_savings = 10
+num_months = 4 
+# Perform the calculation
+new_savings = monthly_savings * num_months
+
+# Print the result
+print(new_savings)
