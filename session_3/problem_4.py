@@ -32,3 +32,14 @@ Step 4: Close the file after writing.
 Step 5: Open the same file in read mode, read its content, and print each line.
 Step 6: Close the file after reading.
 """
+
+import circle_utils
+
+area = circle_utils.circle_area(5)
+
+file = open("circle_area.txt", "w")
+file.write(str(area))
+file.close()
+
+with open("circle_area.txt", "r") as new_file:
+    print(new_file.read())

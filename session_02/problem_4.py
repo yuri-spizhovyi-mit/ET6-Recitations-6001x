@@ -15,20 +15,21 @@ Instructions:
 4. Print each multiplication result, then increment counters properly.
 5. If you have time implement it with for loop as well/
 """
+
 # Initialize outer loop counter
 outer_counter = 1
 # Outer loop: Iterate through numbers 1 to 9
 while outer_counter <= 10:
-# Initialize inner loop counter
+    # Initialize inner loop counter
     inner_counter = 1
-# Inner loop: Iterate from 1 to 10
+    # Inner loop: Iterate from 1 to 10
     while inner_counter <= 10:
         result = outer_counter * inner_counter
         print(f"While Solution: {outer_counter} * {inner_counter} = {result}")
-    # Increment inner loop counter
+        # Increment inner loop counter
         inner_counter += 1
-# Increment outer loop counter
-    outer_counter +=1
+    # Increment outer loop counter
+    outer_counter += 1
 
 outer_for_counter = 1
 for i in range(1, 11):

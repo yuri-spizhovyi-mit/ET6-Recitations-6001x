@@ -16,6 +16,7 @@ Instructions:
 4. Extract and print the substring "Session" using slicing.
 5. Print the string in reverse order.
 """
+
 # Define a string variable
 message = "Recitation Session"
 
@@ -27,5 +28,5 @@ print("The last character: ", message[-1])
 print("Recitation using slicing: ", message[0:10])
 print("Session using slicing: ", message[11:])
 
-# Reverse the string 
+# Reverse the string
 print("Message in reverse order: ", message[::-1])

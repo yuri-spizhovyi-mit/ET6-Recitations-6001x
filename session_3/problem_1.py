@@ -35,29 +35,56 @@ You find the target letter.
 The range becomes too small, meaning the letter isn’t in the string.
 Example Run:
 
-print(find_char_bisection("acegikm", "g"))  # Output: 3  
-print(find_char_bisection("acegikm", "m"))  # Output: 6  
-print(find_char_bisection("acegikm", "b"))  # Output: -1  (not found) 
+print(find_char_bisection("acegikm", "g"))  # Output: 3
+print(find_char_bisection("acegikm", "m"))  # Output: 6
+print(find_char_bisection("acegikm", "b"))  # Output: -1  (not found)
 """
 
-    #Search for a target character in a sorted string using bisection search.
+sorted_str = "acdefgh"
+
+
+# def find_char_bisection(sorted_str, target):
+#     mid = len(sorted_str) // 2
+#     if len(sorted_str) <= 1 and target != sorted_str[0]:
+#         return -1
+#     if target == sorted_str[mid]:
+#         return sorted_str[mid]
+#     elif target > sorted_str[mid]:
+#         return find_char_bisection(sorted_str[mid:], target)
+#     else:
+#         return find_char_bisection(sorted_str[:mid], target)
+
+
+# print(find_char_bisection(sorted_str, "h"))
+
+
+# Search for a target character in a sorted string using bisection search.
+def find_char_bisection(sorted_str, target):
     # Starting index of the search range
-
+    start = 0
     # Ending index of the search range
-
-
+    end = len(sorted_str)
     # Calculate the middle index
-    
-    # Character at the middle index
+    mid = (start + end) // 2
+    while start < end:
+        # Character at the middle index
+        if target == sorted_str[mid]:
+            return mid
+        elif target > sorted_str[mid]:
+            start = mid
+        else:
+            end = mid
+        mid = (start + end) // 2
+    return -1
 
-    
-    # Target found, return its position
-  
-    # Target is in the right half, adjust low index
-   
-    # Target is in the left half, adjust high index
+print(find_char_bisection(sorted_str, "h"))
+# Target found, return its position
 
-     # Target not found, return -1
+# Target is in the right half, adjust low index
+
+# Target is in the left half, adjust high index
+
+# Target not found, return -1
 
 
 # Test cases

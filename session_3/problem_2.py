@@ -20,13 +20,25 @@ Return the final value of total.
 Test the function with several values of n (e.g., 5, 10, 100).
 """
 
-    """Returns the sum of the first n natural numbers using a loop."""
-        # Initialize the accumulator variable to store the sum
+"""Returns the sum of the first n natural numbers using a loop."""
 
-        # Iterate from 1 to n (inclusive)
-  
-        # Add the current number i to total
 
-        # Return the final sum
+def sum_n_iterative(n):
+    total = 0
+    for i in range(1, n + 1):
+        total += i
+    return total
+
+
+print(sum_n_iterative(3))
+
+
+# Initialize the accumulator variable to store the sum
+
+# Iterate from 1 to n (inclusive)
+
+# Add the current number i to total
+
+# Return the final sum
 
 # Test cases

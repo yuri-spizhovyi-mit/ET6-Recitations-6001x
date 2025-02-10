@@ -12,18 +12,18 @@ Instructions:
 3. Print the modified sentence.
 
 """
+
 # Define vowels
-vowels = {'a', 'e', 'i', 'o', 'u'}
+vowels = {"a", "e", "i", "o", "u"}
 sentence = input("Enter a sentence: ")
-replaced_sentence = ''
+replaced_sentence = ""
 
 # Replace vowels with '*'
-for char in sentence: 
-  if char in vowels:
-    replaced_sentence += "*"
-  else:
-    replaced_sentence += char
-
+for char in sentence:
+    if char in vowels:
+        replaced_sentence += "*"
+    else:
+        replaced_sentence += char
 
 
 # Print the modified sentence

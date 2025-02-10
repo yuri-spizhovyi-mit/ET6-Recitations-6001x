@@ -24,9 +24,21 @@ print(sum_n_recursive(10))  # Output: 55
 
 """
 
-    """Returns the sum of the first n natural numbers using recursion."""
-    # Base case
+"""Returns the sum of the first n natural numbers using recursion."""
 
-    # Recursive call: sum of n and sum_n_recursive(n-1)
+
+def sum_n_recursive(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return n
+    else:
+        return n + sum_n_recursive(n - 1)
+
+
+print(sum_n_recursive(2))
+# Base case
+
+# Recursive call: sum of n and sum_n_recursive(n-1)
 
 # Test cases
