@@ -43,12 +43,11 @@ def dotProduct(listA: list, listB: list) -> int:
     listB: a list of numbers of the same length as listA
     Returns: the sum of the pairwise products of listA and listB
     """
-    # Initialize the sum to 0
-    sum = 0
-    # Traverse both lists using their indices
-    for i in range(len(listA)):
-        # Multiply corresponding elements and add to sum
-        sum += listA[i] * listB[i]
+
+    sum = 0  # Initialize the sum to 0
+
+    for i in range(len(listA)):  # Traverse both lists using their indices
+        sum += listA[i] * listB[i]  # Multiply corresponding elements and add to sum
         print(sum)
 
     return sum

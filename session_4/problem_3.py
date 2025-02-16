@@ -56,18 +56,16 @@ def keysWithValue(aDict: dict, target: int) -> list:
     target: an integer
     Returns: a list of keys in aDict with the value target, sorted in increasing order.
     """
-    # Initialize an empty list to store matching keys
-    keys_list = []
-    # Iterate through each key in the dictionary
-    for key, values in aDict.items():
-        # Check if the value matches the target
-        if target == values:
-            # Append the key to the result list
-            keys_list.append(key)
-    # Sort the list of keys in increasing order
-    keys_list.sort()
-    # Return the sorted list
-    return keys_list
+
+    keys_list = []  # Initialize an empty list to store matching keys
+
+    for key, values in aDict.items():  # Iterate through each key in the dictionary
+        if target == values:  # Check if the value matches the target
+            keys_list.append(key)  # Append the key to the result list
+
+    keys_list.sort()  # Sort the list of keys in increasing order
+
+    return keys_list  # Return the sorted list
 
 
 aDict = {5: 1, 3: 90, 4: 90, 12: 90, 22: 90, 21: 100}
