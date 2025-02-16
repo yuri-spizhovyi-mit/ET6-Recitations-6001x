@@ -37,9 +37,11 @@ import circle_utils
 
 area = circle_utils.circle_area(5)
 
-file = open("circle_area.txt", "w")
-file.write(str(area))
+file = open("circle_area.txt", "a")
+file.write(f"Area of the circle is {area}\n")
 file.close()
 
-with open("circle_area.txt", "r") as new_file:
-    print(new_file.read())
+new_file = open("circle_area.txt", "r")
+for line in new_file:
+    print(line.strip())
+new_file.close()
