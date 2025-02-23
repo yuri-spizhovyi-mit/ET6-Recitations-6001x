@@ -39,6 +39,8 @@ Created on Wed Feb 19 13:38:16 2025
 
 @author: somai
 """
+
+
 # Problem 3
 # Instructions:
 # 1. Define a function dict_interdiff(d1, d2) that takes two dictionaries as input.
@@ -62,22 +64,22 @@ def dict_interdiff(d1, d2):
       - difference: Dictionary of unique key-value pairs from `d1` and `d2`.
     """
 
-    # Declare empty dictionaries for intersection and difference
-    intersection = {}
-    difference = {}
-    # Get keys from both dictionaries
+    # Compute intersection (common keys with `f` applied)
+    intersection = {key: f(d1[key], d2[key]) for key in d1 if key in d2}
 
-    # Compute intersection (apply function f to common keys)
+    # Compute difference (keys unique to each dictionary)
+    difference = {key: d1[key] for key in d1 if key not in d2}
+    difference.update({key: d2[key] for key in d2 if key not in d1})
 
-    # Compute difference (keys in d1 but not in d2)
-
-    # Compute difference (keys in d2 but not in d1)
+    return (intersection, difference)
 
 
-# print(dict_interdiff(d1, d2))
-"""
 d1 = {1: 30, 2: 20, 3: 30, 5: 80}
 d2 = {1: 40, 2: 50, 3: 60, 4: 70, 6: 90}
+
+
 def f(a, b):
     return a + b
-print(dict_interdiff(d1, d2))"""
+
+
+print(dict_interdiff(d1, d2))
