@@ -32,15 +32,22 @@ def largest_odd_times(L):
     of times in L. If no such element exists, returns None
     """
 
+    num_counts = {}
+    # Get unique elements
+    for i in L:
+        if i in num_counts:
+            num_counts[i] += 1
+        else:
+            num_counts[i] = 1
 
-# Get unique elements
+    largest_odd = None
+    for num in num_counts:
+        if num_counts[num] % 2 != 0:
+            if largest_odd is None or num > largest_odd:
+                largest_odd = num
+    return largest_odd
+    # If no odd-occurring number is found
 
 
-# Get the largest remaining element
-# Check if it appears an odd number of times
-# Remove and continue checking
-
-# If no odd-occurring number is found
-
-
-print(largest_odd_times([2, 5, 6, 7, 8, 9, 7, 7]))
+# print(largest_odd_times([]))
+print(largest_odd_times([2, 2, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 7, 7]))

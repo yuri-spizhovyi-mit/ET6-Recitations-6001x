@@ -62,11 +62,16 @@ def closest_power(base, num):
     Returns: the exponent (int) such that base^exp is closest to num
     """
     # Define variables
+    exp = 0
     # Convert num to integer
-
+    num = int(num)
     # Iterate to find the closest exponent
-
+    while base**exp < num:
+        exp += 1
     # Compare which power is closer to num
+    lower_power = base ** (exp - 1)
+    higher_power = base**exp
+    return exp if higher_power - num < num - lower_power else exp - 1
 
 
 # Example cases

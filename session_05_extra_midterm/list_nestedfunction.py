@@ -31,4 +31,27 @@
 
 
 # Paste your function here
-# def applyF_filterG(L, f, g):
+L = [0, -10, 5, 6, -4]
+
+
+def applyF_filterG(L, f, g):
+    # Filter the list L based on the condition g(f(i))
+    L[:] = [i for i in L if g(f(i))]
+    # Return the maximum of the mutated list or -1 if empty
+    return max(L, default=-1)
+
+
+# Example usage with defined functions f and g
+def f(i):
+    return i + 2
+
+
+def g(i):
+    return i > 5
+
+
+# Test case
+L = [0, -10, 5, 6, -4]
+result = applyF_filterG(L, f, g)
+print(result)  # Should print 6
+print(L)  # Should print [5, 6]

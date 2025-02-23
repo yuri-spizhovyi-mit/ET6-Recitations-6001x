@@ -17,4 +17,12 @@ def count7(N):
     Returns:
     int: The count of digit 7 in N
     """
-    pass
+    if N == 0:
+        return 0
+    elif N % 10 == 7:
+        return 1 + count7(N // 10)
+    else:
+        return count7(N // 10)
+
+
+print(count7(17))

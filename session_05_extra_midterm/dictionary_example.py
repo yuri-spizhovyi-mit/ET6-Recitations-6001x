@@ -23,5 +23,25 @@ def dict_invert(d):
     """
     d: dict
     Returns an inverted dictionary according to the instructions above
+
+    1. Declare reverted dictionary
+    2. Fetch keys and values
+    3. Put values as keys in reverted dict
+    4. For keys in reverted dict append keys as values to lists
+    5. Run tests
     """
     # YOUR CODE HERE
+    reverted_dict = {}
+    temp_list = []
+    for key, value in d.items():
+        if value not in reverted_dict.keys():
+            reverted_dict[value] = [key]
+        else:
+            temp_list = reverted_dict[value]
+            temp_list.append(key)
+            reverted_dict[value] = temp_list
+    reverted_dict[value].sort()
+    return reverted_dict
+
+
+print(dict_invert({4: True, 2: True, 0: True}))
