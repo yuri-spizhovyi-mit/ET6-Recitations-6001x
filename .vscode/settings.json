@@ -1,7 +1,8 @@
 {
   // https://vscode-docs.readthedocs.io/en/stable/customization/userandworkspace/#default-settings
   //-------- Editor configuration --------
-
+  "editor.autoIndent": "full",
+  "editor.formatOnType": true,
   // Controls auto save of editors that have unsaved changes.: https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save
   "files.autoSave": "onFocusChange",
 
