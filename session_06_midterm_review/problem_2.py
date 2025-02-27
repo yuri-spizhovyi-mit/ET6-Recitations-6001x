@@ -11,14 +11,13 @@ gcd(8,4) is the same as gcd(4, 8 mod 4) = gcd(4,0)
 The gcd is found (and the gcd is equal to a) when we reach 0 for b.
 """
 
-
-def gcd(a, b):
-    """
+# def gcd(a, b):
+"""
     a, b: two positive integers
         Returns the greatest common divisor of a and b
     """
-    # YOUR CODE HERE
-    """
+# YOUR CODE HERE
+"""
 #******************************************************************************************
 """
 
