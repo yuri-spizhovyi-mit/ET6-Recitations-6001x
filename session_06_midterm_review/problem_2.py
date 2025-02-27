@@ -49,7 +49,7 @@ def gcd(a, b):
 
 """
 
-#def gcd(a, b):
+def gcd(a, b):
 # 
 """
 # a, b: two positive integers
@@ -58,3 +58,13 @@ def gcd(a, b):
 # Base case: GCD of a and 0 is a
 # Recursive step: GCD of a and b 
 """
+
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+
+print(gcd(20, 12))
