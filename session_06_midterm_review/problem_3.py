@@ -40,7 +40,8 @@ def score(word, f):
 
 #    b) Find the two highest letter scores from the word. These scores will be the two highest values in the list of letter scores.
 
-# 5. The final score of the word is calculated by applying the function `f` to the two highest letter scores. The first argument to `f` is the highest score, and the second argument is the second-highest score.
+# 5. The final score of the word is calculated by applying the function `f` to the two highest letter scores.
+# The first argument to `f` is the highest score, and the second argument is the second-highest score.
 
 # Implementation Steps:
 # - Initialize an empty list `letter_scores` to store the letter scores.
@@ -92,4 +93,25 @@ def score(word, f):
 
 # # Example usage:
 
+
 # # Output will be 12 (1*0 + 4*1 + 4*2 => highest 4*2 = 8, second highest 4*1 = 4, sum = 12)
+
+
+def f(highest_score: int, second_highest_score: int) -> int:
+    return highest_score + second_highest_score
+
+
+def score(word: str, f: f) -> int:
+    if len(word) <= 1:
+        return "The length of a word should be 2 or more chars"
+    letter_scores = []
+    dictionary = "abcdefghijklmnopqrstuvwxyz"
+
+    for char in word:
+        letter_score = (dictionary.index(char.lower()) + 1) * word.index(char)
+        letter_scores.append(letter_score)
+    letter_scores.sort()
+    return f(letter_scores[-1], letter_scores[-2])
+
+
+print(score("adD", f))
