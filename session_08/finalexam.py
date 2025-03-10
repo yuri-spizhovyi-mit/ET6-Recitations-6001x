@@ -28,7 +28,7 @@ class Person(object):
 
     def getAge(self):
         # Returns self's current age in years
-        if self.age == None:
+        if self.age is None:
             raise ValueError("Age not set")
         return self.age
 
@@ -53,19 +53,29 @@ class USResident(Person):
         status: a string, one of "citizen", "legal_resident", "illegal_resident".
         Raises a ValueError if status is not one of those 3 strings."""
         # Your code here
-        pass
+        self.name = name
+        self.status = status
 
     def getStatus(self):
         """Returns the status of the resident."""
         # Your code here
-        pass
+        if self.status == "citizen" or self.status == "legal_resident":
+            return self.status
+        else:
+            raise ValueError
+
+    def __str__(self):
+        # Return self's name
+        return self.name + " has a status: " + self.status
 
 
 ## TEST CASES: Uncomment and run after implementing USResident
-# resident1 = USResident("Tim Beaver", "citizen")
-# print(resident1.getStatus())  # Expected Output: "citizen"
+resident1 = USResident("Tim Beaver", "citizen")
+print(resident1.getStatus())  # Expected Output: "citizen"
 
-# resident2 = USResident("Sophia Anderson", "legal_resident")
-# print(resident2.getStatus())  # Expected Output: "legal_resident"
+resident2 = USResident("Sophia Anderson", "legal_resident")
+print(resident2.getStatus())  # Expected Output: "legal_resident"
+print(resident2)
 
-# resident3 = USResident("Tim Horton", "non-resident")  # Should raise ValueError
+resident3 = USResident("Tim Horton", "non-resident")  # Should raise ValueError
+# print(resident3.getStatus())

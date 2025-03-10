@@ -1,4 +1,4 @@
-## Understanding the `fraction` Class: Special Methods, `self` & `other`, and Math Concepts
+# Understanding the `fraction` Class: Special Methods, `self` & `other`, and Math Concepts
 
 The `fraction` class demonstrates **object-oriented programming (OOP)** principles, implementing mathematical operations using **special methods (dunder methods)**. Let’s analyze it step by step.
 
