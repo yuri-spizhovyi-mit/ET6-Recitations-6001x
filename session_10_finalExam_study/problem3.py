@@ -20,13 +20,14 @@
 
 
 def cipher(map_from, map_to, code):
-    pass
-
-
-# Step 1: Create the mapping dictionary
-
-
-# Step 2: Decode the message using the dictionary
-
-
-# Step 3: Return the mapping dictionary and decoded message
+    # Step 1: Create the mapping dictionary
+    key_code = {}
+    decoded_chars = []
+    # Step 2: Decode the message using the dictionary
+    for i in range(len(map_from)):
+        key_code[map_from[i]] = map_to[i]
+    for char in code:
+        decoded_chars.append(key_code[char])
+    decoded_word = "".join(decoded_chars)
+    # Step 3: Return the mapping dictionary and decoded message
+    return key_code, decoded_word
