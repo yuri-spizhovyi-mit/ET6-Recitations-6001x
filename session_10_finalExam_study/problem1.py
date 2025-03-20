@@ -88,7 +88,7 @@ class MITCampus(Campus):
 
 
 # For example, if c = MITCampus(Location(1,2)) then executing the following sequence of commands:
-c = MITCampus(Location(0, 0))
+c = MITCampus(Location(1, 2))
 print(c.add_tent(Location(2, 3)))  # should return True
 c.add_tent(Location(1, 2))  # should return True
 c.add_tent(Location(0, 0))  # should return False
